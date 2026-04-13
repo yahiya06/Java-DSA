@@ -1,5 +1,6 @@
 package com.arrays;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class First {
@@ -32,6 +33,9 @@ public class First {
         for(int j : arr4){
             System.out.println(j);
         }
+
+        //print using toTring method
+        System.out.println(Arrays.toString(arr4));
 
 
     }
