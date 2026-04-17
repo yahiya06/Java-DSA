@@ -14,7 +14,6 @@ public class OrderAgnosticBS {
     static int orderAgnosticBS(int[] arr, int target){
         int start =0;
         int end = arr.length-1;
-
         if (arr[start]<arr[end]){ // statement check the array is in ascending or descending order
             while(start<=end){ // if the statement is true then array is in ascending order
                 int mid = start + (end - start)/2;
