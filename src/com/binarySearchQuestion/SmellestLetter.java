@@ -4,11 +4,11 @@ public class SmellestLetter {
     public static void main(String[] args) {
         char[] letters ={'c','j','f'};
         char target ='c' ;
-        int ans = nextGreatestLetter(letters, target);
+        char ans = nextGreatestLetter(letters, target);
         System.out.println(ans);
 
     }
-    static int nextGreatestLetter(char[] letters, char target){
+    static char nextGreatestLetter(char[] letters, char target){
         int start =0;
         int end = letters.length-1;
         while(start <= end){
