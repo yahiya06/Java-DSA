@@ -1,6 +1,6 @@
 package com.binarySearchQuestion;
 
-public class CeilingOfNumber {
+public class FloorOfNumber {
     public static void main(String[] args) {
         int[] arr ={2,3,5,9,14,16,18};
         int target = 4;
@@ -21,6 +21,7 @@ public class CeilingOfNumber {
                 return arr[mid];
             }
         }
-        return arr[start];
+        return arr[end];
     }
-}
+    }
+
