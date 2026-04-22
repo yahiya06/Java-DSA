@@ -2,13 +2,20 @@ package com.binarySearchQuestion;
 
 public class InfiniteArray {
     public static void main(String[] args) {
-        int[] arr ={11,2,34,44,56,77,88};
+        int[] arr ={1,2,34,44,56,77,88,99,103,109,119,123,156};
         int target =56;
+        System.out.println(range(arr,target));
     }
 
     static int range(int arr[], int target){
-        return 0;
-
+        int start =0;
+        int end =1;
+        while(target>arr[end]){
+            int temp = end =1;
+            end = end + (end - start+ 1 )*2;
+            start = temp;
+        }
+        return binarysearch(arr, target, start, end);
     }
 
     static int binarysearch(int[] arr, int target, int start, int end){
