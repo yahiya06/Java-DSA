@@ -2,7 +2,9 @@ package com.binarySearchQuestion;
 
 public class SearchInMountainArray {
     public static void main(String[] args) {
-
+        int[] arr = { 1,2,3,10,15,20,19,11,5,1};
+        int target = 20;
+        System.out.println(ans(arr, target));
     }
 
     static int ans(int[] arr, int target){
@@ -11,7 +13,7 @@ public class SearchInMountainArray {
         if(firstry != -1){
             return firstry;
         }
-        return orderAgnosticBS(arr, target, peak, arr.length-1);
+        return orderAgnosticBS(arr, target, peak+1, arr.length-1);
     }
     static int peakIndex(int[] arr){
         int start =0;
