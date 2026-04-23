@@ -17,7 +17,6 @@ public class InfiniteArray {
         }
         return binarysearch(arr, target, start, end);
     }
-
     static int binarysearch(int[] arr, int target, int start, int end){
         while(start <= end){
             int mid = start + (end-start)/2;
