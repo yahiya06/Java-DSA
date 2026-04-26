@@ -1,9 +1,14 @@
 package com.binarySearchQuestion;
 
+import java.util.Arrays;
+
 // leetcode problem 35
 public class SearchInsertPosition {
     public static void main(String[] args) {
-
+        int[] nums ={1,3,5,6};
+        int target = 2;
+        int ans = searchInsert(nums, target);
+        System.out.println(ans);
     }
        static public int searchInsert(int[] nums, int target) {
             int start = 0;
