@@ -1,7 +1,12 @@
 package com.SortingQuestion;
 
 class FindDuplicate {
-    public int findDuplicate(int[] nums) {
+    public static void main(String[] args) {
+        int[] nums = {1,3,4,2,2};
+        int ans = findDuplicate(nums);
+        System.out.println(ans);
+    }
+    static public int findDuplicate(int[] nums) {
         int i=0;
         while (i<nums.length){
             if (nums[i] != i+1){
