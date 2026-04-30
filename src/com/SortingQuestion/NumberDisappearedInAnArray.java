@@ -1,5 +1,6 @@
 package com.SortingQuestion;
 
+import java.util.ArrayList;
 import java.util.List;
 //leetcode 448
 class NumberDisappearedInAnArray {
@@ -13,6 +14,12 @@ class NumberDisappearedInAnArray {
                 nums[correct] = temp;
             }else i++;
         }
-
+        List<Integer> ans = new ArrayList<>();
+        for(int index =0; index<nums.length;index++){
+            if (nums[index] != index+1){
+                ans.add(index+1);
+            }
+        }
+        return ans;
     }
 }
