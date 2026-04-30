@@ -5,8 +5,8 @@ class FindDuplicate {
         int i=0;
         while (i<nums.length){
             if (nums[i] != i+1){
-                int correct = nums[i]+1;
-                if (nums[i] == nums[correct]){
+                int correct = nums[i]-1;
+                if (nums[i] != nums[correct]){
                     int temp = nums[i];
                     nums[i] = nums[correct];
                     nums[correct] =temp;
