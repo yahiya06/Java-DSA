@@ -4,7 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 //leetcode 448
 class NumberDisappearedInAnArray {
-    public List<Integer> findDisappearedNumbers(int[] nums) {
+    public static void main(String[] args) {
+        int[] nums ={4,3,2,7,8,2,3,1};
+        List<Integer> ans = findDisappearedNumbers(nums);
+        System.out.println(ans);
+    }
+    static public List<Integer> findDisappearedNumbers(int[] nums) {
         int i =0;
         while(i<nums.length){
             int correct = nums[i]-1;
