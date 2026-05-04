@@ -16,22 +16,19 @@ public class Pattern5 {
     }
     static void pattern5(int n){
         int row = n;
-        if(true){
+
             for (int i = 1; i <=row ; i++) {
-                for (int j = 1; j <=i ; j++) {
+                for (int j = 1; j <= i; j++) {
                     System.out.print("* ");
                 }
                 System.out.println();
             }
-        }
-        if(true) {
-            for (int ii = n-1; ii >= 1; ii--) {
-                for (int jj = ii; jj >=1; jj--) {
+            for (int i = n-1; i >= 1; i--) {
+                for (int j = i; j >= 1; j--) {
                     System.out.print("* ");
                 }
                 System.out.println();
             }
-        }
 
     }
 }
