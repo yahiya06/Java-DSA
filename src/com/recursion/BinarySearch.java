@@ -9,6 +9,8 @@ public class BinarySearch {
         int ans = bs(nums, target, start, end);
         System.out.println(ans);
     }
+
+
 //    static int bs(int[] nums, int target , int start, int end){
 //        if(start> end){
 //            return -1;
