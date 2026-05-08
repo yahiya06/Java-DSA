@@ -5,7 +5,7 @@ public class BinarySearch {
         int[] nums = {2,3,4,8,9,10,23,45,60};
         int target = 5;
         int start = 0;
-        int end = nums.length;
+        int end = nums.length-1;
         int ans = bs(nums, target, start, end);
         System.out.println(ans);
     }
