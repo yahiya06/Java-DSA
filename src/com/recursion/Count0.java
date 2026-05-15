@@ -13,7 +13,7 @@ public class Count0 {
         count(n/10);
     }
     public static void main(String[] args) {
-        int n = 30204;
+        int n = 10010;
         count(n);
         System.out.println(ans);
 
