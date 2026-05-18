@@ -8,15 +8,15 @@ public class LinearSearch {
         System.out.println(ans);
     }
     static int ls(int[] arr, int target,int index){
-        if (target == arr[index]){
-            return index;
-        }
+//        if (target == arr[index]){
+//            return index;
+//        }
 
         if(index == arr.length-1){
             return -1;
         }
 
 
-        return ls(arr,target,index+1);
+        return  ls(arr,target,index+1);
     }
 }
