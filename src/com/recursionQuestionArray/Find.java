@@ -19,4 +19,19 @@ public class Find {
         }
         return findAll(arr,target,index+1,list);
     }
+
+
+    static ArrayList<Integer> findAll2(int[] arr, int target, int index){
+        ArrayList<Integer> list = new ArrayList<>();
+        if(index == arr.length){
+            return list;
+        }
+        if(arr[index] == target){
+            list.add(index);
+        }
+        ArrayList<Integer> ansFromBelowCalls =  findAll2(arr,target,index+1);
+
+        list.addAll(ansFromBelowCalls);
+        return list;
+    }
 }
