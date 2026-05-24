@@ -3,7 +3,7 @@ package com.recursionQuestionArray;
 public class RotatedBS {
     public static void main(String[] args) {
         int[] nums ={5,6,7,8,9,1,2,3};
-        int target = 7;
+        int target = 5;
         System.out.println(search(nums,target,0,nums.length-1));
     }
 
