@@ -29,7 +29,6 @@ public class MissingNumber {
                 i++;
             }
         }
-
         for(int index = 0; index < nums.length; index++){
 
             if(nums[index] != index){
