@@ -4,10 +4,12 @@ import java.util.ArrayList;
 
 public class Find {
     public static void main(String[] args) {
-        int[] arr ={2,3,4,4,5,7,8,90};
+        int[] arr ={1,2,4,4};
         int target = 4;
-        ArrayList<Integer> ans = findAll(arr, target, 0, new ArrayList<Integer>() );
-        System.out.println(ans);
+//        ArrayList<Integer> ans = findAll(arr, target, 0, new ArrayList<Integer>() );
+//        System.out.println(ans);
+
+        System.out.println(findAll2(arr,target,0));
     }
 
     static ArrayList<Integer> findAll(int[] arr, int target, int index, ArrayList<Integer> list){
