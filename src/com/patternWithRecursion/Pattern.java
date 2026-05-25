@@ -5,6 +5,8 @@ package com.patternWithRecursion;
 //**
 //*
 
+
+
 public class Pattern {
     public static void main(String[] args) {
         tri(4,0);
