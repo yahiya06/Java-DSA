@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class SelectionSort {
     public static void main(String[] args) {
         int[] nums = {4,3,2,1};
-        selSort(nums,nums.length-1,0,0);
+        selSort(nums,nums.length,0,0);
         System.out.println(Arrays.toString(nums));
     }
     static void selSort(int[] nums, int r, int c, int max){
@@ -21,8 +21,8 @@ public class SelectionSort {
            }
         }else{
             int temp = nums[max];
-            nums[r-1] =nums[max];
-            nums[max]=temp;
+            nums[max]=nums[r-1];
+            nums[r-1]=temp;
             selSort(nums,r-1,0,0);
         }
     }
