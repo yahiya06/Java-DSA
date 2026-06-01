@@ -1,8 +1,12 @@
 package com.quickSort;
 
+import java.util.Arrays;
+
 public class QuickSort {
     public static void main(String[] args) {
-
+        int[] nums = {5,4,3,2,10};
+        sort(nums,0,nums.length-1);
+        System.out.println(Arrays.toString(nums));
     }
     static void sort(int[] nums, int low, int high){
         if(low >= high){
