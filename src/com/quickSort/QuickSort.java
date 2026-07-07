@@ -9,7 +9,7 @@ public class QuickSort {
         System.out.println(Arrays.toString(nums));
     }
     static void sort(int[] nums, int low, int high){
-        if(low >= high){
+         if(low >= high){
             return;
         }
 
