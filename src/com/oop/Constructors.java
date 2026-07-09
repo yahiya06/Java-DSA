@@ -7,6 +7,9 @@ public class Constructors {
         System.out.println(std1.rno);
         System.out.println(std1.name);
         System.out.println(std1.marks);
+
+        Student1 std2 = new Student1();
+        System.out.println(std2.name);
     }
 }
 
@@ -15,10 +18,15 @@ class Student1{
     String name;
     float marks;
 
+    //Student1(){
+//        this.rno=1;
+//        this.name="yahiya";
+//        this.marks=98.0f;
+//    }
+
+    //calling constructor with another constructor
     Student1(){
-        this.rno=1;
-        this.name="yahiya";
-        this.marks=98.0f;
+        this(1,"another",34.0f);
     }
 
     Student1(int rno, String name, float marks){
