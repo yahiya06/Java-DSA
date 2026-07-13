@@ -10,5 +10,6 @@ public class BoxWeight extends Box{
     public BoxWeight(double len, double hig, double wid, double weight) {
         super(len, hig, wid);
         this.weight = weight;
+
     }
 }
