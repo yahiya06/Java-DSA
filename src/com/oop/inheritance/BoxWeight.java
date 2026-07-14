@@ -12,4 +12,9 @@ public class BoxWeight extends Box{
         this.weight = weight;
 
     }
+
+     void msg(){
+        System.out.println("Sub class msg called");
+        super.msg();
+    }
 }

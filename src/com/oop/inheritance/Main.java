@@ -13,5 +13,10 @@ public class Main {
 
         BoxWeight obj4= new BoxWeight(10.0, 10.0, 10.2, 12.0);
         System.out.println(obj4.h +" "+ obj4.l+" " + obj4.w+" " +obj4.weight);
+
+        BoxWeight msg = new BoxWeight();
+
+            msg.msg();
+
     }
 }

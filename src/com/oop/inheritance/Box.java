@@ -5,6 +5,10 @@ public class Box {
     double h;
     double w;
 
+    void msg(){
+        System.out.println("Super class msg called");
+    }
+
     Box(){
         this.h= -1;
         this.l= -1;
