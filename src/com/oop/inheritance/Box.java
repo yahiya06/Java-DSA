@@ -15,6 +15,12 @@ public class Box {
         this.w= -1;
     }
 
+    Box (double side) {
+        this.w = side;
+        this.l = side;
+        this.h = side;
+    }
+
     Box(double len,  double hig, double wid){
         this.l= len;
         this.h= hig;

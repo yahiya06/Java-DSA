@@ -15,8 +15,9 @@ public class Main {
         System.out.println(obj4.h +" "+ obj4.l+" " + obj4.w+" " +obj4.weight);
 
         BoxWeight msg = new BoxWeight();
+        msg.msg();
 
-            msg.msg();
-
+        BoxPrice obj5= new BoxPrice(23.4,10.0,90.0);
+        System.out.println(obj5.price + " " + obj5.weight +" "+ obj5.w+ " "+ obj5.l+" "+obj5.h);
     }
 }

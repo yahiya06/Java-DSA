@@ -13,6 +13,11 @@ public class BoxWeight extends Box{
 
     }
 
+    BoxWeight(double weight, double side){
+        super(side);
+        this.weight=weight;
+    }
+
      void msg(){
         System.out.println("Sub class msg called");
         super.msg();
