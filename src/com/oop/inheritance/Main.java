@@ -19,5 +19,8 @@ public class Main {
 
         BoxPrice obj5= new BoxPrice(23.4,10.0,90.0);
         System.out.println(obj5.price + " " + obj5.weight +" "+ obj5.w+ " "+ obj5.l+" "+obj5.h);
+
+        BoxPrice obj6= new BoxPrice(23.4,10.0,90.0,"black" );
+        System.out.println(obj5.color + " " + obj5.price + " " + obj5.weight +" "+ obj5.w+ " "+ obj5.l+" "+obj5.h);
     }
 }
