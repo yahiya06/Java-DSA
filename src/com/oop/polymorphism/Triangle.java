@@ -1,4 +1,4 @@
-package com.oop.polymorphisn;
+package com.oop.polymorphism;
 
 public class Triangle extends Shapes{
     void Area(){

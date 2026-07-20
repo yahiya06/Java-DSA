@@ -1,4 +1,4 @@
-package com.oop.polymorphisn;
+package com.oop.polymorphism;
 
 public class Numbers {
     int sum(int a , int b){
