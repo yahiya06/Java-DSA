@@ -3,10 +3,11 @@ package com.oop.polymorphism;
 public class Main {
     public static void main(String[] args) {
         Shapes shapes = new Shapes();
-        Circle circle = new Circle();
-        Square square = new Square();
-        Triangle triangle = new Triangle();
+        Shapes circle = new Circle();
+        Shapes square = new Square();
+        Shapes triangle = new Triangle();
 
         shapes.Area();
+        circle.Area();
     }
 }
