@@ -6,6 +6,10 @@ public abstract class Parent {
     public Parent(int age){
         this.age=age;
     }
+
+    static  void hellow(){
+        System.out.println("hellow child");
+    }
     abstract void career();
     abstract void partner();
 }
