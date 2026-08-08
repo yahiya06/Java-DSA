@@ -1,6 +1,8 @@
 package com.oop.cloning;
 
-public class Human {
+import java.util.ConcurrentModificationException;
+
+public class Human implements Cloneable{
 
     int age;
     String name;
@@ -13,5 +15,9 @@ public class Human {
     public Human (Human other){
         this.name = other.name;
         this.age=other.age;
+    }
+
+    public Object clone() throws CloneNotSupportedException{
+        return super.clone();
     }
 }
