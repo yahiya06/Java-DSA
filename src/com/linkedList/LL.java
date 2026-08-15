@@ -62,6 +62,9 @@ public class LL {
     }
 
     public int removeLast(){
+        if (size<=1){
+           return removeFirst();
+        }
         int val = tail.value;
         Node secondLast = get(size-2);
         tail=secondLast;
@@ -75,6 +78,19 @@ public class LL {
             node=node.next;
         }
         return node;
+    }
+
+    public int remove(int index){
+        if (index==0){
+            return removeFirst();
+        }
+        if(index==size-1){
+            return removeLast();
+        }
+        Node prev = get(index-1);
+        int val=prev.next.value;
+        prev.next=prev.next.next;
+        return val;
     }
 
     public void display(){

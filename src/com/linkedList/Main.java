@@ -20,5 +20,8 @@ public class Main {
 
         System.out.println(list.removeLast());
         list.display();
+
+        System.out.println(list.remove(2));
+        list.display();
     }
 }
