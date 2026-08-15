@@ -9,6 +9,16 @@ public class Main {
         list.insertFirst(66);
         list.insertFirst(21);
 
+        list.insertEnd(99);
+
+        list.insert(100,4);
+
+        list.display();
+
+        System.out.println(list.removeFirst());
+        list.display();
+
+        System.out.println(list.removeLast());
         list.display();
     }
 }
