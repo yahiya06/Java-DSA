@@ -51,6 +51,7 @@ public class LL {
         size++;
     }
 
+    //remove first node from list
     public int removeFirst(){
         int val = head.value;
         head=head.next;
@@ -58,6 +59,7 @@ public class LL {
             tail=null;
         }
         size--;
+
         return val;
     }
 
