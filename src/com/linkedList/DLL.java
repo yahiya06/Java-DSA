@@ -32,6 +32,13 @@ public class DLL {
         last.next=node;
         node.prev=last;
     }
+    public Node get(int index){
+        Node node = head;
+        for (int i = 0; i < index; i++) {
+            node=node.next;
+        }
+        return node;
+    }
     public void display(){
         Node node = head;
         Node last = null;
@@ -46,6 +53,7 @@ public class DLL {
             System.out.print(last.val+"->");
             last=last.prev;
         }
+        System.out.println("START");
     }
 
 
