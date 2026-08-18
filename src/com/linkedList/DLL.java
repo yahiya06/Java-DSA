@@ -15,12 +15,20 @@ public class DLL {
 
     public void display(){
         Node node = head;
+        Node last = null;
         while (node!=null){
+            last=node;
             System.out.print(node.val+"->");
             node=node.next;
         }
         System.out.println("END");
+
+        while (last!=null){
+            System.out.print(last.val+"->");
+            last=last.prev;
+        }
     }
+
 
     private class Node{
         private int val;
