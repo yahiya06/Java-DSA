@@ -30,6 +30,8 @@ public class Main {
         Dlist.insertf(90);
         Dlist.insertf(123);
 
+        Dlist.insertl(99);
+
         Dlist.display();
     }
 }
