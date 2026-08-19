@@ -32,6 +32,8 @@ public class Main {
 
         Dlist.insertl(99);
 
+        Dlist.insert(100,34);
+
         Dlist.display();
     }
 }
