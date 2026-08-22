@@ -42,5 +42,8 @@ public class Main {
         cll.insert(15);
         cll.insert(16);
         cll.display();
+
+        cll.delete(12);
+        cll.display();
     }
 }
