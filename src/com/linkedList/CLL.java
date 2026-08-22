@@ -17,14 +17,27 @@ public class CLL {
             tail=node;
             return;
         }
+        tail.next=node;
+        node.next=head;
+        tail=node;
+    }
+
+    public void display(){
+        Node node = head;
+        if (head!=null){
+            do {
+                System.out.print(node.value +"->");
+                node= node.next;
+            }while (node!=head);
+            System.out.println("HEAD");
+        }
     }
 
     private class Node{
         int value;
         Node next;
 
-        public Node(Node next, int val) {
-            this.next = next;
+        public Node(int val) {
             this.value = val;
         }
     }

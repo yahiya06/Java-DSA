@@ -35,5 +35,12 @@ public class Main {
         Dlist.insert(100,34);
 
         Dlist.display();
+
+        CLL cll = new CLL();
+        cll.insert(12);
+        cll.insert(13);
+        cll.insert(15);
+        cll.insert(16);
+        cll.display();
     }
 }
