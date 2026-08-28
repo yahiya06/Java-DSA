@@ -45,5 +45,8 @@ public class Main {
 
         cll.delete(12);
         cll.display();
+
+        list.insertRec(78,3);
+        list.display();
     }
 }

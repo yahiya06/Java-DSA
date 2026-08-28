@@ -50,6 +50,20 @@ public class LL {
         temp.next=node;
         size++;
     }
+    //insert using recurrsion
+    public void insertRec(int val ,int index){
+        head=insertRec(val,index,head);
+    }
+
+    private Node insertRec(int val, int index, Node node){
+        if (index==0){
+            Node temp = new Node(node,val);
+            size++;
+            return temp;
+        }
+        node.next = insertRec(val , index-1 , node.next);
+        return node;
+    }
 
     //remove first node from list
     public int removeFirst(){
@@ -117,5 +131,6 @@ public class LL {
             this.next= next;
             this.value = value;
         }
+
     }
 }
