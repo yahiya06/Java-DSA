@@ -149,4 +149,13 @@ public class LL {
         tail.next=null;
     }
 
+    public int lengthOfList(){
+        int count = 0;
+        Node node = head;
+        while (node != null){
+            count++;
+            node=node.next;
+        }
+        return count;
+    }
 }

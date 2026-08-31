@@ -60,7 +60,10 @@ public class Main {
         list.insertEnd(3);
 
         list.display();
+        System.out.println(list.lengthOfList());
         list.deleteDuplicate();
         list.display();
+
+        System.out.println(list.lengthOfList());
     }
 }
