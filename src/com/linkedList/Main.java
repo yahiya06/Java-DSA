@@ -65,5 +65,7 @@ public class Main {
         list.display();
 
         System.out.println(list.lengthOfList());
+
+        System.out.println(list.middleNode());
     }
 }
