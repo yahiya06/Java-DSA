@@ -1,5 +1,7 @@
 package com.linkedList;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 //        LL list = new LL();
@@ -49,23 +51,39 @@ public class Main {
 //        list.insertRec(78,3);
 //        list.display();
 
-        LL list = new LL();
+//        LL list = new LL();
+//
+//        list.insertEnd(1);
+//        list.insertEnd(1);
+//        list.insertEnd(2);
+//        list.insertEnd(2);
+//        list.insertEnd(2);
+//        list.insertEnd(3);
+//        list.insertEnd(3);
 
-        list.insertEnd(1);
-        list.insertEnd(1);
-        list.insertEnd(2);
-        list.insertEnd(2);
-        list.insertEnd(2);
-        list.insertEnd(3);
-        list.insertEnd(3);
+//        list.display();
+//        System.out.println(list.lengthOfList());
+//        list.deleteDuplicate();
+//        list.display();
+//
+//        System.out.println(list.lengthOfList());
+//
+//        System.out.println(list.middleNode());
 
-        list.display();
-        System.out.println(list.lengthOfList());
-        list.deleteDuplicate();
-        list.display();
+        LL first = new LL();
+        LL second = new LL();
 
-        System.out.println(list.lengthOfList());
+        first.insertEnd(1);
+        first.insertEnd(3);
+        first.insertEnd(5);
 
-        System.out.println(list.middleNode());
+        second.insertEnd(1);
+        second.insertEnd(3);
+        second.insertEnd(9);
+        second.insertEnd(14);
+
+        LL ans = LL.merge(first,second);
+        ans.display();
+
     }
 }
