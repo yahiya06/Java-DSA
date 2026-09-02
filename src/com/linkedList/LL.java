@@ -210,4 +210,17 @@ public class LL {
         }
         return false ;
     }
+
+//    public static Node reverseList(Node head) {
+//        Node prev = null;
+//        Node current = head;
+//        Node next;
+//        while(current != null){
+//            next = current.next;
+//            current.next = prev;
+//            prev = current;
+//            current = next;
+//        }
+//        return prev;
+//    }
 }
