@@ -85,5 +85,7 @@ public class Main {
         LL ans = LL.merge(first,second);
         ans.display();
 
+        System.out.println(ans.hasCycle());
+
     }
 }
