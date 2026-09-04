@@ -211,6 +211,27 @@ public class LL {
         return false ;
     }
 
+    public int lengthCycle() {
+        Node fast = head;
+        Node slow = head;
+
+        while(fast != null && fast.next != null){
+            fast = fast.next.next;
+            slow = slow.next;
+
+            if(fast == slow){
+                Node temp = slow;
+                int length = 0;
+                do {
+                    temp = temp.next;
+                    length++;
+                }while (temp!=slow);
+                return length;
+            }
+        }
+        return 0 ;
+    }
+
 //    public static Node reverseList(Node head) {
 //        Node prev = null;
 //        Node current = head;
@@ -223,4 +244,7 @@ public class LL {
 //        }
 //        return prev;
 //    }
+
+
+
 }
