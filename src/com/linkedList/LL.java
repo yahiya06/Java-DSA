@@ -211,7 +211,7 @@ public class LL {
         return false ;
     }
 
-    public int lengthCycle() {
+    public int lengthCycle(Node head) {
         Node fast = head;
         Node slow = head;
 
@@ -230,6 +230,36 @@ public class LL {
             }
         }
         return 0 ;
+    }
+
+    public Node detectCycle(Node head) {
+        int length =0;
+        Node fast = head;
+        Node slow = head;
+
+        while(fast != null && fast.next != null){
+            fast = fast.next.next;
+            slow = slow.next;
+            if(fast == slow){
+                length=lengthCycle(slow);
+                break;
+            }
+        }
+
+        if (length==0){
+            return null;
+        }
+        Node f = head;
+        Node s= head;
+        while (length>0){
+            s=s.next;
+            length--;
+        }
+        while (f!=s){
+            f=f.next;
+            s=s.next;
+        }
+        return s;
     }
 
 //    public static Node reverseList(Node head) {
