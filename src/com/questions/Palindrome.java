@@ -23,8 +23,7 @@ public class Palindrome {
                 end--;
             }
 
-            if(Character.toLowerCase(str.charAt(start)) !=
-                    Character.toLowerCase(str.charAt(end))){
+            if(Character.toLowerCase(str.charAt(start)) != Character.toLowerCase(str.charAt(end))){
                 return false;
             }
 
