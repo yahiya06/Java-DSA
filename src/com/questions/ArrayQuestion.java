@@ -7,12 +7,14 @@ public class ArrayQuestion {
         int[] nums = {12, 5, 8, 21, 3};
         int[] nums2 = {10, 5, 20, 8, 20};
         int[] nums3 = {1, 2, 2, 4, 7};
+        int[] nums4= {0, 1, 0, 3, 12};
         int ans = largestElement(nums);
         System.out.println(ans);
         int ans2 = secondLargestElement(nums2);
         System.out.println(ans2);
         System.out.println(checkSorted(nums3));
         System.out.println(Arrays.toString(revArray(nums)));
+        System.out.println(Arrays.toString(moveZeros(nums4)));
     }
 
     //Q1 — Largest Element
@@ -68,5 +70,28 @@ public class ArrayQuestion {
         }
         return nums;
     }
+
+    //Q5 — Move Zeroes
+//    public static int[] moveZeros(int[] nums){
+//        int start =0;
+//        int end = nums.length-1;
+//        while (start<end){
+//            if (nums[start]!=0){
+//                int temp = nums[start-1];
+//                nums[start-1]=nums[start];
+//                nums[start]=temp;
+//
+//            }
+//            start++;
+//        }
+//        return nums;
+//        for (int i =0;i<nums.length-1;i++){
+//            for (int j=1;j<i;j++){
+//                if (nums[i]==0){
+//                    int temp =
+//                }
+//            }
+//        }
+//    }
 
 }
