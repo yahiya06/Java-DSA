@@ -72,26 +72,17 @@ public class ArrayQuestion {
     }
 
     //Q5 — Move Zeroes
-//    public static int[] moveZeros(int[] nums){
-//        int start =0;
-//        int end = nums.length-1;
-//        while (start<end){
-//            if (nums[start]!=0){
-//                int temp = nums[start-1];
-//                nums[start-1]=nums[start];
-//                nums[start]=temp;
-//
-//            }
-//            start++;
-//        }
-//        return nums;
-//        for (int i =0;i<nums.length-1;i++){
-//            for (int j=1;j<i;j++){
-//                if (nums[i]==0){
-//                    int temp =
-//                }
-//            }
-//        }
-//    }
+    public static int[] moveZeros(int[] nums){
+        int first = 0;
+        for(int i = 0; i <= nums.length-1; i++){
+            if(nums[i] != 0){
+                int temp;
+                temp = nums[i];
+                nums[i]=nums[first];
+                nums[first]=temp;
+                first++;
+            }
+        }
+    }
 
 }
