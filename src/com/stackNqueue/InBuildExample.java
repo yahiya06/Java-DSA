@@ -1,8 +1,6 @@
 package com.stackNqueue;
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 public class InBuildExample {
     public static void main(String[] args) {
@@ -29,5 +27,10 @@ public class InBuildExample {
         System.out.println(queue.remove());
         System.out.println(queue.remove());
         System.out.println(queue.peek());
+
+        Deque<Integer> deque = new ArrayDeque<>();
+        deque.add(10);
+        deque.add(9);
+        System.out.println(deque.peek());
     }
 }
