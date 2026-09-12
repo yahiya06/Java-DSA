@@ -83,6 +83,7 @@ public class ArrayQuestion {
                 first++;
             }
         }
+        return nums;
     }
 
 }
