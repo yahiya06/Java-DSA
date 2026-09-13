@@ -23,7 +23,26 @@ public class CustomStack {
         return true;
     }
 
+    public int pop() throws Exception{
+        if (isEmpty()){
+            throw new Exception("can not pop from an empty stack");
+        }
+        int item = data[ptr];
+        ptr--;
+        return item;
+    }
+
+    public int peek() throws Exception{
+        if (isEmpty()){
+            throw new Exception("stack is empty");
+        }
+        return data[ptr];
+    }
+
     private boolean isFull() {
         return ptr == data.length-1;
+    }
+    private boolean isEmpty(){
+        return ptr == -1;
     }
 }
