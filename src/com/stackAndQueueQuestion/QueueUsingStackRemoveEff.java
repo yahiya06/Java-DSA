@@ -25,7 +25,7 @@ public class QueueUsingStackRemoveEff {
        return first.pop();
     }
 
-    public int peek() throws Exception{
+    public int peek() {
         return first.peek();
     }
 
