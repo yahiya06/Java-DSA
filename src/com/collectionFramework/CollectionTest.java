@@ -7,10 +7,14 @@ import java.util.ListIterator;
 
 public class CollectionTest {
     public static void main(String[] args) {
-//        List<Integer> list = new ArrayList<>();
-//        list.add(12);
-//        list.add(13);
-//        list.add(14);
+        List<Integer> list = new ArrayList<>();
+        list.add(12);
+        list.add(13);
+        list.add(14);
+        Integer[] nums = list.toArray(new Integer[0]);
+        for (int x: nums){
+            System.out.print(x+",");
+        }
 //        System.out.println(list);
 //        list.set(1,10);
 //        List<Integer> list2 = new ArrayList<>(list);
