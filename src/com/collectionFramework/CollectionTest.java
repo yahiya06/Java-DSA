@@ -1,9 +1,6 @@
 package com.collectionFramework;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 
 public class CollectionTest {
     public static void main(String[] args) {
@@ -28,16 +25,26 @@ public class CollectionTest {
 //
 //        System.out.println(list3.indexOf(123));
 
-        List<Integer> ll = new LinkedList<>();
-        ll.add(12);
-        ll.add(13);
-        ll.add(14);
-        ll.add(15);
+//        List<Integer> ll = new LinkedList<>();
+//        ll.add(12);
+//        ll.add(13);
+//        ll.add(14);
+//        ll.add(15);
+//
+//        ListIterator<Integer>  iterator = ll.listIterator();
+//        System.out.println(iterator.next());
+//        System.out.println(iterator.next());
+//        System.out.println(iterator.previous());
 
-        ListIterator<Integer>  iterator = ll.listIterator();
-        System.out.println(iterator.next());
-        System.out.println(iterator.next());
-        System.out.println(iterator.previous());
+        Queue<Integer> q = new LinkedList<>();
+
+        q.offer(12);
+        q.offer(13);
+        q.offer(14);
+        System.out.println();
+        System.out.println(q.peek());
+        System.out.println(q.poll());
+        System.out.println(q);
     }
 
 }
