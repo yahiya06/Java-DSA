@@ -1,5 +1,7 @@
 package com.questions;
 
+import java.util.Arrays;
+
 public class Solution {
     public static void main(String[] args) {
        String s = "listen";
@@ -10,7 +12,10 @@ public class Solution {
 //        System.out.println(n);
 
         int[] nums = {10, 5, 20, 8, 15};
-        System.out.println(secl(nums));
+//        System.out.println(secl(nums));
+
+        int[] nums1 = {0, 1, 0, 3, 12};
+        System.out.println(Arrays.toString(moveZeros(nums1)));
     }
 
     public static boolean validAnagram(String s, String t){
@@ -64,6 +69,20 @@ public class Solution {
             }
         }
         return second;
+    }
+
+    public static int[] moveZeros(int[] num){
+        int first = 0;
+        //int second = 1;
+        for (int second = 1 ; second <= num.length-1 ; second++){
+            if (num[second] != 0){
+                int temp = num[second];
+                num[second] = num[first];
+                num[first] = temp;
+                first++;
+            }
+        }
+        return num;
     }
 
 }
