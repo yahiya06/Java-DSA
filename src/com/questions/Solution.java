@@ -16,10 +16,13 @@ public class Solution {
 
         int[] nums1 = {0, 1, 0, 3, 12};
 
-        System.out.println(Arrays.toString(moveZeros(nums1)));
+        //System.out.println(Arrays.toString(moveZeros(nums1)));
 
         int[] nums2 = {0,1,2,4};
-        System.out.println(missingNo(nums2));
+        //System.out.println(missingNo(nums2));
+
+        System.out.println(isPrime(2));
+
     }
 
     public static boolean validAnagram(String s, String t){
@@ -99,4 +102,12 @@ public class Solution {
        return expected-actual;
     }
 
+    public static boolean isPrime(int n){
+        for (int i = 2; i < n-1; i++ ){
+            if (n % i == 0){
+                return false;
+            }
+        }
+        return true;
+    }
 }
