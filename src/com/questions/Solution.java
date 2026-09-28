@@ -15,7 +15,11 @@ public class Solution {
 //        System.out.println(secl(nums));
 
         int[] nums1 = {0, 1, 0, 3, 12};
+
         System.out.println(Arrays.toString(moveZeros(nums1)));
+
+        int[] nums2 = {0,1,2,4};
+        System.out.println(missingNo(nums2));
     }
 
     public static boolean validAnagram(String s, String t){
@@ -83,6 +87,16 @@ public class Solution {
             }
         }
         return num;
+    }
+
+    public static int missingNo(int[] nums){
+       int n = nums.length;
+       int expected = n * (n+1)/2;
+       int actual=0;
+       for (int num : nums){
+           actual = actual +num;
+       }
+       return expected-actual;
     }
 
 }
