@@ -21,7 +21,10 @@ public class Solution {
         int[] nums2 = {0,1,2,4};
         //System.out.println(missingNo(nums2));
 
-        System.out.println(isPrime(2));
+        //System.out.println(isPrime(2));
+
+        int[] nums3 = {1, 3, 4, 2, 2};
+        System.out.println(duplicate(nums3));
 
     }
 
@@ -109,5 +112,16 @@ public class Solution {
             }
         }
         return true;
+    }
+
+    public static int duplicate(int[] nums){
+        for (int i = 0 ; i<=nums.length-1;i++){
+            for (int j = i+1; j<nums.length; j++){
+                if (nums[i] == nums[j]){
+                    return nums[i];
+                }
+            }
+        }
+        return -1;
     }
 }
