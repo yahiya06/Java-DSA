@@ -24,7 +24,9 @@ public class Solution {
         //System.out.println(isPrime(2));
 
         int[] nums3 = {1, 3, 4, 2, 2};
-        System.out.println(duplicate(nums3));
+        //System.out.println(duplicate(nums3));
+
+        System.out.println(largeElement(nums));
 
     }
 
@@ -123,5 +125,16 @@ public class Solution {
             }
         }
         return -1;
+    }
+
+    public static int largeElement(int[] nums){
+        int l = nums[0];
+
+        for (int i = 1; i<=nums.length-1;i++){
+            if (nums[i] > l){
+                l = nums[i];
+            }
+        }
+        return l;
     }
 }
