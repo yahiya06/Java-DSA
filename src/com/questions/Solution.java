@@ -26,8 +26,12 @@ public class Solution {
         int[] nums3 = {1, 3, 4, 2, 2};
         //System.out.println(duplicate(nums3));
 
-        System.out.println(largeElement(nums));
+        //System.out.println(largeElement(nums));
 
+        int[] nums6= {1, 2,3,4,5};
+        //System.out.println(Arrays.toString(rev(nums6)));
+
+        System.out.println(isSorted(nums3));
     }
 
     public static boolean validAnagram(String s, String t){
@@ -136,5 +140,31 @@ public class Solution {
             }
         }
         return l;
+    }
+
+    public static int[] rev(int[] nums){
+        int first =0;
+        int last = nums.length-1;
+
+        while (first<last){
+            int temp = nums[first];
+            nums[first] = nums[last];
+            nums[last] =temp;
+
+            first++;
+            last--;
+        }
+        return nums;
+    }
+
+    public static boolean isSorted(int[] nums){
+        int first = 0;
+        for (int i = 1; i<=nums.length-1;i++){
+            if(nums[i] < nums[first]){
+                return false;
+            }
+            first++;
+        }
+        return true;
     }
 }
