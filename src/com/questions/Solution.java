@@ -31,7 +31,15 @@ public class Solution {
         int[] nums6= {1, 2,3,4,5};
         //System.out.println(Arrays.toString(rev(nums6)));
 
-        System.out.println(isSorted(nums3));
+        //System.out.println(isSorted(nums3));
+
+        //System.out.println(sumOfElement(nums6));
+
+        //System.out.println(smallestElement(nums));
+
+        int[] nums5 = {1, 2, 3, 4, 6, 7};
+        //System.out.println(Arrays.toString(countEvenAndOdd(nums5)));
+
     }
 
     public static boolean validAnagram(String s, String t){
@@ -167,4 +175,38 @@ public class Solution {
         }
         return true;
     }
+
+    public static int sumOfElement(int[] nums){
+        int sum = nums[0];
+        for (int i =1; i<=nums.length-1; i++){
+            sum = sum + nums[i];
+        }
+        return sum;
+    }
+
+    public static int smallestElement(int[] nums){
+        int smallest = nums[0];
+        for (int i = 1; i<=nums.length-1;i++){
+            if (nums[i] < smallest){
+                smallest = nums[i];
+            }
+        }
+        return smallest;
+    }
+
+    public static int[] countEvenAndOdd(int[] nums){
+        int even = 0;
+        int odd =0;
+
+        for (int i = 0; i<= nums.length-1; i++){
+            if (nums[i] % 2 == 0){
+                even++;
+            }else {
+                odd++;
+            }
+        }
+
+        return new int[]{even,odd};
+    }
+
 }
