@@ -40,6 +40,8 @@ public class Solution {
         int[] nums5 = {1, 2, 3, 4, 6, 7};
         //System.out.println(Arrays.toString(countEvenAndOdd(nums5)));
 
+        int[] nums7 = {10, 20, 30, 40, 50};
+        System.out.println(average(nums7));
     }
 
     public static boolean validAnagram(String s, String t){
@@ -209,4 +211,11 @@ public class Solution {
         return new int[]{even,odd};
     }
 
+    public static double average(int[] nums){
+        int sum = nums[0];
+        for (int i = 1; i<=nums.length-1; i++){
+            sum = sum+ nums[i];
+        }
+        return (double) sum /nums.length;
+    }
 }
