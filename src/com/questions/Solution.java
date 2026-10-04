@@ -53,7 +53,7 @@ public class Solution {
         int i=0;
         while (i<=s.length()-1){
             arr[s.charAt(i) - 'a']++;
-            arr[t.charAt(i)-'a']--;
+            arr[t.charAt(i) -'a']--;
             i++;
         }
         for (int n : arr){
@@ -116,7 +116,7 @@ public class Solution {
        int expected = n * (n+1)/2;
        int actual=0;
        for (int num : nums){
-           actual = actual +num;
+           actual = actual + num;
        }
        return expected-actual;
     }
