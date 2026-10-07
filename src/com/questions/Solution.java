@@ -46,6 +46,8 @@ public class Solution {
         int [] nums8 = {1, 2, 3, 4, 5, 6, 7};
         System.out.println(Arrays.toString(rotateAnArray(nums8,3)));
 
+        System.out.println(secondSmallest(nums));
+
     }
 
     public static boolean validAnagram(String s, String t){
@@ -266,5 +268,20 @@ public class Solution {
         int temp = nums[s];
         nums[s] = nums[e];
         nums[e] = temp;
+    }
+
+    public static int secondSmallest(int[] nums){
+        int small = nums[0];
+        int ssmall = Integer.MAX_VALUE;
+        for(int i = 1 ; i<= nums.length-1; i++){
+            if (nums[i] < small){
+                ssmall = small;
+                small = nums[i];
+            }
+            if (nums[i] < ssmall && nums[i] > small){
+                ssmall = nums[i];
+            }
+        }
+        return ssmall;
     }
 }
