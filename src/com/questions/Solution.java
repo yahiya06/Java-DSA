@@ -41,7 +41,11 @@ public class Solution {
         //System.out.println(Arrays.toString(countEvenAndOdd(nums5)));
 
         int[] nums7 = {10, 20, 30, 40, 50};
-        System.out.println(average(nums7));
+        //System.out.println(average(nums7));
+
+        int [] nums8 = {1, 2, 3, 4, 5, 6, 7};
+        System.out.println(Arrays.toString(rotateAnArray(nums8,3)));
+
     }
 
     public static boolean validAnagram(String s, String t){
@@ -217,5 +221,40 @@ public class Solution {
             sum = sum+ nums[i];
         }
         return (double) sum /nums.length;
+    }
+
+    public static int[] rotateAnArray(int[] nums, int k){
+        int start = 0;
+        int end = k;
+        while (start<end){
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] =temp;
+            start++;
+            end--;
+        }
+        int start1 = k+1;
+        int end1 = nums.length-1;
+        while (start1<end1){
+            int temp = nums[start1];
+            nums[start1] = nums[end1];
+            nums[end1] =temp;
+            start1++;
+            end1--;
+        }
+        int start2 =0;
+        int end2 = nums.length-1;
+        while (start2<end2){
+            int temp = nums[start2];
+            nums[start2] = nums[end2];
+            nums[end2] =temp;
+            start2++;
+            end2--;
+        }
+
+        return nums;
+    }
+
+    public static void swap(int s , int e){
     }
 }
