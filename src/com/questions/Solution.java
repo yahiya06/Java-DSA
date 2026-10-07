@@ -7,34 +7,27 @@ public class Solution {
        String s = "listen";
        String t = "silent";
 //        System.out.println(validAnagram(s,t));
-//
 //        String n= rev(s);
 //        System.out.println(n);
 
         int[] nums = {10, 5, 20, 8, 15};
-//        System.out.println(secl(nums));
+//      System.out.println(secl(nums));
 
         int[] nums1 = {0, 1, 0, 3, 12};
-
         //System.out.println(Arrays.toString(moveZeros(nums1)));
 
         int[] nums2 = {3, 0, 1};
         //System.out.println(missingNo(nums2));
-
         //System.out.println(isPrime(2));
 
         int[] nums3 = {1, 3, 4, 2, 2};
         //System.out.println(duplicate(nums3));
-
         //System.out.println(largeElement(nums));
 
         int[] nums6= {1, 2,3,4,5};
         //System.out.println(Arrays.toString(rev(nums6)));
-
         //System.out.println(isSorted(nums3));
-
         //System.out.println(sumOfElement(nums6));
-
         //System.out.println(smallestElement(nums));
 
         int[] nums5 = {1, 2, 3, 4, 6, 7};
@@ -45,10 +38,8 @@ public class Solution {
 
         int [] nums8 = {1, 2, 3, 4, 5, 6, 7};
        // System.out.println(Arrays.toString(rotateAnArray(nums8,3)));
-
        // System.out.println(secondSmallest(nums));
-
-        System.out.println(missingNumber(nums2));
+        // System.out.println(missingNumber(nums2));
     }
 
     public static boolean validAnagram(String s, String t){
