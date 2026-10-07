@@ -224,8 +224,10 @@ public class Solution {
     }
 
     public static int[] rotateAnArray(int[] nums, int k){
+        int n = nums.length;
+
         int start = 0;
-        int end = k;
+        int end = n-k-1;
         while (start<end){
             int temp = nums[start];
             nums[start] = nums[end];
@@ -233,8 +235,9 @@ public class Solution {
             start++;
             end--;
         }
-        int start1 = k+1;
-        int end1 = nums.length-1;
+
+        int start1 = n-k;
+        int end1 = n-1;
         while (start1<end1){
             int temp = nums[start1];
             nums[start1] = nums[end1];
@@ -242,6 +245,7 @@ public class Solution {
             start1++;
             end1--;
         }
+
         int start2 =0;
         int end2 = nums.length-1;
         while (start2<end2){
