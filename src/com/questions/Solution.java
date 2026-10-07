@@ -229,9 +229,10 @@ public class Solution {
         int start = 0;
         int end = n-k-1;
         while (start<end){
-            int temp = nums[start];
-            nums[start] = nums[end];
-            nums[end] =temp;
+//            int temp = nums[start];
+//            nums[start] = nums[end];
+//            nums[end] =temp;
+            swap(nums,start,end);
             start++;
             end--;
         }
@@ -239,9 +240,10 @@ public class Solution {
         int start1 = n-k;
         int end1 = n-1;
         while (start1<end1){
-            int temp = nums[start1];
-            nums[start1] = nums[end1];
-            nums[end1] =temp;
+//            int temp = nums[start1];
+//            nums[start1] = nums[end1];
+//            nums[end1] =temp;
+            swap(nums,start1,end1);
             start1++;
             end1--;
         }
@@ -249,9 +251,10 @@ public class Solution {
         int start2 =0;
         int end2 = nums.length-1;
         while (start2<end2){
-            int temp = nums[start2];
-            nums[start2] = nums[end2];
-            nums[end2] =temp;
+//            int temp = nums[start2];
+//            nums[start2] = nums[end2];
+//            nums[end2] =temp;
+            swap(nums,start2,end2);
             start2++;
             end2--;
         }
@@ -259,6 +262,9 @@ public class Solution {
         return nums;
     }
 
-    public static void swap(int s , int e){
+    public static void swap(int[] nums, int s , int e){
+        int temp = nums[s];
+        nums[s] = nums[e];
+        nums[e] = temp;
     }
 }
