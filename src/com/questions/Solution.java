@@ -10,7 +10,7 @@ public class Solution {
 //        String n= rev(s);
 //        System.out.println(n);
 
-        int[] nums = {10, 5, 20, 8, 15};
+        int[] nums = {10, 5, 3, 4, 3, 5, 6};
 //      System.out.println(secl(nums));
 
         int[] nums1 = {0, 1, 0, 3, 12};
@@ -40,6 +40,8 @@ public class Solution {
        // System.out.println(Arrays.toString(rotateAnArray(nums8,3)));
        // System.out.println(secondSmallest(nums));
         // System.out.println(missingNumber(nums2));
+
+        System.out.println(firstRepeatingElement(nums));
     }
 
     public static boolean validAnagram(String s, String t){
@@ -286,5 +288,16 @@ public class Solution {
             actualAns += x;
         }
         return sum - actualAns;
+    }
+
+    public static int firstRepeatingElement(int[] nums){
+        for (int i =0; i<=nums.length-1; i++){
+            for (int j = i-1; j >= 0 ; j--){
+                if (nums[i] == nums[j]){
+                    return nums[j];
+                }
+            }
+        }
+        return -1;
     }
 }
