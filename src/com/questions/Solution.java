@@ -10,7 +10,7 @@ public class Solution {
 //        String n= rev(s);
 //        System.out.println(n);
 
-        int[] nums = {2, 7, 11, 15};
+        int[] nums = {2, 2, 1, 1, 1, 2, 2};
 //      System.out.println(secl(nums));
 
         int[] nums1 = {0, 1, 0, 3, 12};
@@ -43,7 +43,9 @@ public class Solution {
 
         //System.out.println(firstRepeatingElement(nums));
 
-        System.out.println(ifArrayContainsPairGivenSum(nums,9));
+        //System.out.println(ifArrayContainsPairGivenSum(nums,9));
+
+        System.out.println(majorityElement(nums));
     }
 
     public static boolean validAnagram(String s, String t){
@@ -312,5 +314,22 @@ public class Solution {
             }
         }
         return false;
+    }
+
+    public static int majorityElement(int[] nums){
+        int size = nums.length/2;
+
+        for (int i = 0; i<=nums.length-1; i++){
+            int counter = 0;
+            for (int num : nums) {
+                if (nums[i] == num) {
+                    counter++;
+                }
+            }
+            if (counter>size){
+                return nums[i];
+            }
+        }
+        return -1;
     }
 }
