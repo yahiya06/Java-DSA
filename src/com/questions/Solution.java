@@ -1,5 +1,6 @@
 package com.questions;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Solution {
@@ -10,7 +11,7 @@ public class Solution {
 //        String n= rev(s);
 //        System.out.println(n);
 
-        int[] nums = {1, 2, 3};
+        int[] nums = {4,3,2,7,8,1};
 //      System.out.println(secl(nums));
 
         int[] nums1 = {0, 1, 0, 3, 12};
@@ -47,7 +48,9 @@ public class Solution {
 
         //System.out.println(majorityElement(nums));
 
-        System.out.println(containsDuplicate(nums));
+       // System.out.println(containsDuplicate(nums));
+
+        System.out.println(numbersDisappearedInArray(nums));
     }
 
     public static boolean validAnagram(String s, String t){
@@ -344,5 +347,40 @@ public class Solution {
             }
         }
         return false;
+    }
+
+    //revise it
+    public static ArrayList<Integer> numbersDisappearedInArray(int[] nums ){
+        Arrays.sort(nums);
+        int index = 1;
+        ArrayList<Integer> arr = new ArrayList<>();
+
+//        for (int i = 0 ; i <= nums.length-1; i++){
+//             if (nums[i] != index){
+//                 arr.add(index);
+//             }
+//             index++;
+//        }
+//        return arr;
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] < index) {
+                continue; // Skip duplicates
+            }
+
+            while (index < nums[i]) {
+                arr.add(index);
+                index++;
+            }
+
+            index++;
+        }
+
+        while (index <= nums.length) {
+            arr.add(index);
+            index++;
+        }
+
+        return arr;
     }
 }
