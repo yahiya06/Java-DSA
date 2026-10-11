@@ -11,7 +11,7 @@ public class Solution {
 //        String n= rev(s);
 //        System.out.println(n);
 
-        int[] nums = {4,3,2,7,8,1};
+        int[] nums = {0, 0, 1, 1, 2, 3, 3,4};
 //      System.out.println(secl(nums));
 
         int[] nums1 = {0, 1, 0, 3, 12};
@@ -50,7 +50,9 @@ public class Solution {
 
        // System.out.println(containsDuplicate(nums));
 
-        System.out.println(numbersDisappearedInArray(nums));
+       // System.out.println(numbersDisappearedInArray(nums));
+
+        System.out.println(removeDuplicateFromSortedArray(nums));
     }
 
     public static boolean validAnagram(String s, String t){
@@ -350,7 +352,7 @@ public class Solution {
     }
 
     //revise it
-    public static ArrayList<Integer> numbersDisappearedInArray(int[] nums ){
+    public static ArrayList<Integer> numbersDisappearedInArray(int[] nums ) {
         Arrays.sort(nums);
         int index = 1;
         ArrayList<Integer> arr = new ArrayList<>();
@@ -382,5 +384,19 @@ public class Solution {
         }
 
         return arr;
+    }
+
+
+    public static int removeDuplicateFromSortedArray(int[] nums){
+        int first = 0;
+       // int count = 1;
+        for (int i = 1; i<=nums.length-1; i++){
+            if (nums[first] != nums[i]){
+                first++;
+                nums[first] = nums[i];
+                //count++;
+            }
+        }
+        return first +1;
     }
 }
