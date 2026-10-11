@@ -403,13 +403,7 @@ public class Solution {
                 continue;
             }
 
-          char ch = s.charAt(start);
-          ch = Character.toLowerCase(ch);
-
-          char ch1 = s.charAt(end);
-          ch1 = Character.toLowerCase(ch1);
-
-          if (ch != ch1){
+          if (Character.toLowerCase(s.charAt(start)) != Character.toLowerCase(s.charAt(end))){
               return false;
           }
 
@@ -419,4 +413,6 @@ public class Solution {
 
         return true;
     }
+
+
 }
