@@ -2,6 +2,7 @@ package com.questions;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Locale;
 
 public class Solution {
     public static void main(String[] args) {
@@ -382,6 +383,40 @@ public class Solution {
                 return false;
             }
         }
+        return true;
+    }
+
+    public static boolean isPalindrome(String s) {
+        int start = 0 ;
+        int end = s.length()-1;
+
+        while (start<end){
+            char f = s.charAt(start);
+            if (!Character.isLetterOrDigit(f)){
+                start++;
+                continue;
+            }
+
+            char e = s.charAt(end);
+            if (!Character.isLetterOrDigit(e)){
+                end--;
+                continue;
+            }
+
+          char ch = s.charAt(start);
+          ch = Character.toLowerCase(ch);
+
+          char ch1 = s.charAt(end);
+          ch1 = Character.toLowerCase(ch1);
+
+          if (ch != ch1){
+              return false;
+          }
+
+          start++;
+          end--;
+        }
+
         return true;
     }
 }
