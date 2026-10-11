@@ -36,25 +36,7 @@ public class Solution {
 
     }
 
-    public static boolean validAnagram(String s, String t){
-        if (s.length() != t.length()){
-            return false;
-        }
-
-        int[] arr = new int[26];
-        int i=0;
-        while (i<=s.length()-1){
-            arr[s.charAt(i) - 'a']++;
-            arr[t.charAt(i) -'a']--;
-            i++;
-        }
-        for (int n : arr){
-            if (n != 0){
-                return false;
-            }
-        }
-        return true;
-    }
+//******************-------array-------******************
 
     public static String rev(String s){
         char[] arr = s.toCharArray();
@@ -381,5 +363,25 @@ public class Solution {
         return first +1;
     }
 
+    //******************-------String-------******************
 
+    public static boolean validAnagram(String s, String t){
+        if (s.length() != t.length()){
+            return false;
+        }
+
+        int[] arr = new int[26];
+        int i=0;
+        while (i<=s.length()-1){
+            arr[s.charAt(i) - 'a']++;
+            arr[t.charAt(i) -'a']--;
+            i++;
+        }
+        for (int n : arr){
+            if (n != 0){
+                return false;
+            }
+        }
+        return true;
+    }
 }
