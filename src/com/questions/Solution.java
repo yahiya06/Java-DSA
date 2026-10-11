@@ -7,52 +7,33 @@ public class Solution {
     public static void main(String[] args) {
        String s = "listen";
        String t = "silent";
+
+       int[] nums = {0, 0, 1, 1, 2, 3, 3,4};
 //        System.out.println(validAnagram(s,t));
 //        String n= rev(s);
 //        System.out.println(n);
+//        System.out.println(secl(nums));
+//        System.out.println(Arrays.toString(moveZeros(nums)));
+//        System.out.println(missingNo(nums));
+//        System.out.println(isPrime(2));
+//        System.out.println(duplicate(nums));
+//        System.out.println(largeElement(nums));
+//        System.out.println(Arrays.toString(rev(nums)));
+//        System.out.println(isSorted(nums));
+//        System.out.println(sumOfElement(nums));
+//        System.out.println(smallestElement(nums));
+//        System.out.println(Arrays.toString(countEvenAndOdd(nums)));
+//        System.out.println(average(nums));
+//        System.out.println(Arrays.toString(rotateAnArray(nums,3)));
+//        System.out.println(secondSmallest(nums));
+//        System.out.println(missingNumber(nums));
+//        System.out.println(firstRepeatingElement(nums));
+//        System.out.println(ifArrayContainsPairGivenSum(nums,9));
+//        System.out.println(majorityElement(nums));
+//        System.out.println(containsDuplicate(nums));
+//        System.out.println(numbersDisappearedInArray(nums));
+//        System.out.println(removeDuplicateFromSortedArray(nums));
 
-        int[] nums = {0, 0, 1, 1, 2, 3, 3,4};
-//      System.out.println(secl(nums));
-
-        int[] nums1 = {0, 1, 0, 3, 12};
-        //System.out.println(Arrays.toString(moveZeros(nums1)));
-
-        int[] nums2 = {3, 0, 1};
-        //System.out.println(missingNo(nums2));
-        //System.out.println(isPrime(2));
-
-        int[] nums3 = {1, 3, 4, 2, 2};
-        //System.out.println(duplicate(nums3));
-        //System.out.println(largeElement(nums));
-
-        int[] nums6= {1, 2,3,4,5};
-        //System.out.println(Arrays.toString(rev(nums6)));
-        //System.out.println(isSorted(nums3));
-        //System.out.println(sumOfElement(nums6));
-        //System.out.println(smallestElement(nums));
-
-        int[] nums5 = {1, 2, 3, 4, 6, 7};
-        //System.out.println(Arrays.toString(countEvenAndOdd(nums5)));
-
-        int[] nums7 = {10, 20, 30, 40, 50};
-        //System.out.println(average(nums7));
-
-        int [] nums8 = {1, 2, 3, 4, 5, 6, 7};
-       // System.out.println(Arrays.toString(rotateAnArray(nums8,3)));
-       // System.out.println(secondSmallest(nums));
-        // System.out.println(missingNumber(nums2));
-
-        //System.out.println(firstRepeatingElement(nums));
-
-        //System.out.println(ifArrayContainsPairGivenSum(nums,9));
-
-        //System.out.println(majorityElement(nums));
-
-       // System.out.println(containsDuplicate(nums));
-
-       // System.out.println(numbersDisappearedInArray(nums));
-
-        System.out.println(removeDuplicateFromSortedArray(nums));
     }
 
     public static boolean validAnagram(String s, String t){
@@ -399,4 +380,6 @@ public class Solution {
         }
         return first +1;
     }
+
+
 }
