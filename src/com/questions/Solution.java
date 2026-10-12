@@ -435,5 +435,35 @@ public class Solution {
         return first;
     }
 
-    
+    public static boolean valid(String s, String t){
+        if (s.length() != t.length()){
+            return false;
+        }
+
+        char[] arr = new char[26];
+        int i = 0;
+        while(i <= s.length()-1 ){
+            arr[s.charAt(i) - 'a']++;
+            arr[t.charAt(i)-'a']--;
+            i++;
+        }
+        for (int n : arr){
+            if (n!=0){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static String reverseVowels(String s) {
+    int first = 0;
+    int last = s.length()-1;
+
+    for (int i = 0 ; i<=s.length()-1; i++){
+        char ch = 0;
+        if (ch == 'a' || ch == 'e' || ch == 'i' ||  ch == 'o' || ch == 'u') {
+            // It is a vowel
+        }
+    }
+    }
 }
