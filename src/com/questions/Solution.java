@@ -244,13 +244,6 @@ public class Solution {
         nums[e] = temp;
     }
 
-    public static void swapc(char[] nums, int s , int e){
-        char temp = nums[s];
-        nums[s] = nums[e];
-        nums[e] = temp;
-    }
-
-
     public static int secondSmallest(int[] nums){
         int small = nums[0];
         int ssmall = Integer.MAX_VALUE;
@@ -378,6 +371,12 @@ public class Solution {
 
     //******************-------String-------******************
 
+    public static void swapc(char[] nums, int s , int e){
+        char temp = nums[s];
+        nums[s] = nums[e];
+        nums[e] = temp;
+    }
+
     public static boolean validAnagram(String s, String t){
         if (s.length() != t.length()){
             return false;
@@ -482,5 +481,25 @@ public class Solution {
         }
     }
     return new String(arr);
+    }
+
+    public String reverseWords(String s) {
+
+        if (s.trim().isEmpty()) return "";
+        String[] arr = s.trim().split("\\s+");
+
+        int start = 0;
+        int end = arr.length-1;
+
+        while (start<end){
+            String temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+
+            start++;
+            end--;
+        }
+
+        return String.join(" ", arr);
     }
 }
