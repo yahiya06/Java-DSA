@@ -244,6 +244,13 @@ public class Solution {
         nums[e] = temp;
     }
 
+    public static void swapc(char[] nums, int s , int e){
+        char temp = nums[s];
+        nums[s] = nums[e];
+        nums[e] = temp;
+    }
+
+
     public static int secondSmallest(int[] nums){
         int small = nums[0];
         int ssmall = Integer.MAX_VALUE;
@@ -458,12 +465,22 @@ public class Solution {
     public static String reverseVowels(String s) {
     int first = 0;
     int last = s.length()-1;
-
-    for (int i = 0 ; i<=s.length()-1; i++){
-        char ch = 0;
-        if (ch == 'a' || ch == 'e' || ch == 'i' ||  ch == 'o' || ch == 'u') {
-            // It is a vowel
+    char[] arr = s.toCharArray();
+    while (first<last){
+        char chf = Character.toLowerCase(arr[first]);
+        char chl = Character.toLowerCase(arr[last]);
+        if (chf == 'a' || chf == 'e' || chf == 'i' ||  chf == 'o' || chf == 'u') {
+            if (chl == 'a' || chl == 'e' || chl == 'i' ||  chl == 'o' || chl == 'u') {
+                swapc(arr,first,last);
+                first++;
+                last--;
+            }else {
+                last--;
+            }
+        }else {
+            first++;
         }
     }
+    return new String(arr);
     }
 }
