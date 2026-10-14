@@ -6,10 +6,10 @@ import java.util.Locale;
 
 public class Solution {
     public static void main(String[] args) {
-       String s = "listen";
-       String t = "silent";
+        String s = "listen";
+        String t = "silent";
 
-       int[] nums = {0, 0, 1, 1, 2, 3, 3,4};
+        int[] nums = {0, 0, 1, 1, 2, 3, 3, 4};
 //        System.out.println(validAnagram(s,t));
 //        String n= rev(s);
 //        System.out.println(n);
@@ -37,14 +37,16 @@ public class Solution {
 // --------------------------------------------------------------------------------------------------------
 
         String[] strs = {"flower", "flow", "fl"};
+        String s1 = "loveleetcode";
 
 //        System.out.println(longestCommonPrefix(strs));
+        System.out.println(firstUniqChar(s1));
 
     }
 
 //******************-------array-------******************
 
-    public static String rev(String s){
+    public static String rev(String s) {
         char[] arr = s.toCharArray();
 
         int f = 0;
@@ -62,26 +64,26 @@ public class Solution {
         return new String(arr);
     }
 
-    public static int secl(int[] nums){
+    public static int secl(int[] nums) {
         int first = nums[0];
-        int second= 0;
-        for (int i =1; i<=nums.length-1; i++){
-            if (nums[i] > first){
+        int second = 0;
+        for (int i = 1; i <= nums.length - 1; i++) {
+            if (nums[i] > first) {
                 second = first;
                 first = nums[i];
             }
-            if (nums[i] > second && nums[i] < first){
-                second=nums[i];
+            if (nums[i] > second && nums[i] < first) {
+                second = nums[i];
             }
         }
         return second;
     }
 
-    public static int[] moveZeros(int[] num){
+    public static int[] moveZeros(int[] num) {
         int first = 0;
         //int second = 1;
-        for (int second = 1 ; second <= num.length-1 ; second++){
-            if (num[second] != 0){
+        for (int second = 1; second <= num.length - 1; second++) {
+            if (num[second] != 0) {
                 int temp = num[second];
                 num[second] = num[first];
                 num[first] = temp;
@@ -91,29 +93,29 @@ public class Solution {
         return num;
     }
 
-    public static int missingNo(int[] nums){
-       int n = nums.length;
-       int expected = n * (n+1)/2;
-       int actual=0;
-       for (int num : nums){
-           actual = actual + num;
-       }
-       return expected-actual;
+    public static int missingNo(int[] nums) {
+        int n = nums.length;
+        int expected = n * (n + 1) / 2;
+        int actual = 0;
+        for (int num : nums) {
+            actual = actual + num;
+        }
+        return expected - actual;
     }
 
-    public static boolean isPrime(int n){
-        for (int i = 2; i < n-1; i++ ){
-            if (n % i == 0){
+    public static boolean isPrime(int n) {
+        for (int i = 2; i < n - 1; i++) {
+            if (n % i == 0) {
                 return false;
             }
         }
         return true;
     }
 
-    public static int duplicate(int[] nums){
-        for (int i = 0 ; i<=nums.length-1;i++){
-            for (int j = i+1; j<nums.length; j++){
-                if (nums[i] == nums[j]){
+    public static int duplicate(int[] nums) {
+        for (int i = 0; i <= nums.length - 1; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[i] == nums[j]) {
                     return nums[i];
                 }
             }
@@ -121,25 +123,25 @@ public class Solution {
         return -1;
     }
 
-    public static int largeElement(int[] nums){
+    public static int largeElement(int[] nums) {
         int l = nums[0];
 
-        for (int i = 1; i<=nums.length-1;i++){
-            if (nums[i] > l){
+        for (int i = 1; i <= nums.length - 1; i++) {
+            if (nums[i] > l) {
                 l = nums[i];
             }
         }
         return l;
     }
 
-    public static int[] rev(int[] nums){
-        int first =0;
-        int last = nums.length-1;
+    public static int[] rev(int[] nums) {
+        int first = 0;
+        int last = nums.length - 1;
 
-        while (first<last){
+        while (first < last) {
             int temp = nums[first];
             nums[first] = nums[last];
-            nums[last] =temp;
+            nums[last] = temp;
 
             first++;
             last--;
@@ -147,10 +149,10 @@ public class Solution {
         return nums;
     }
 
-    public static boolean isSorted(int[] nums){
+    public static boolean isSorted(int[] nums) {
         int first = 0;
-        for (int i = 1; i<=nums.length-1;i++){
-            if(nums[i] < nums[first]){
+        for (int i = 1; i <= nums.length - 1; i++) {
+            if (nums[i] < nums[first]) {
                 return false;
             }
             first++;
@@ -158,79 +160,79 @@ public class Solution {
         return true;
     }
 
-    public static int sumOfElement(int[] nums){
+    public static int sumOfElement(int[] nums) {
         int sum = nums[0];
-        for (int i =1; i<=nums.length-1; i++){
+        for (int i = 1; i <= nums.length - 1; i++) {
             sum = sum + nums[i];
         }
         return sum;
     }
 
-    public static int smallestElement(int[] nums){
+    public static int smallestElement(int[] nums) {
         int smallest = nums[0];
-        for (int i = 1; i<=nums.length-1;i++){
-            if (nums[i] < smallest){
+        for (int i = 1; i <= nums.length - 1; i++) {
+            if (nums[i] < smallest) {
                 smallest = nums[i];
             }
         }
         return smallest;
     }
 
-    public static int[] countEvenAndOdd(int[] nums){
+    public static int[] countEvenAndOdd(int[] nums) {
         int even = 0;
-        int odd =0;
+        int odd = 0;
 
-        for (int i = 0; i<= nums.length-1; i++){
-            if (nums[i] % 2 == 0){
+        for (int i = 0; i <= nums.length - 1; i++) {
+            if (nums[i] % 2 == 0) {
                 even++;
-            }else {
+            } else {
                 odd++;
             }
         }
 
-        return new int[]{even,odd};
+        return new int[]{even, odd};
     }
 
-    public static double average(int[] nums){
+    public static double average(int[] nums) {
         int sum = nums[0];
-        for (int i = 1; i<=nums.length-1; i++){
-            sum = sum+ nums[i];
+        for (int i = 1; i <= nums.length - 1; i++) {
+            sum = sum + nums[i];
         }
-        return (double) sum /nums.length;
+        return (double) sum / nums.length;
     }
 
-    public static int[] rotateAnArray(int[] nums, int k){
+    public static int[] rotateAnArray(int[] nums, int k) {
         int n = nums.length;
 
         int start = 0;
-        int end = n-k-1;
-        while (start<end){
+        int end = n - k - 1;
+        while (start < end) {
 //            int temp = nums[start];
 //            nums[start] = nums[end];
 //            nums[end] =temp;
-            swap(nums,start,end);
+            swap(nums, start, end);
             start++;
             end--;
         }
 
-        int start1 = n-k;
-        int end1 = n-1;
-        while (start1<end1){
+        int start1 = n - k;
+        int end1 = n - 1;
+        while (start1 < end1) {
 //            int temp = nums[start1];
 //            nums[start1] = nums[end1];
 //            nums[end1] =temp;
-            swap(nums,start1,end1);
+            swap(nums, start1, end1);
             start1++;
             end1--;
         }
 
-        int start2 =0;
-        int end2 = nums.length-1;
-        while (start2<end2){
+        int start2 = 0;
+        int end2 = nums.length - 1;
+        while (start2 < end2) {
 //            int temp = nums[start2];
 //            nums[start2] = nums[end2];
 //            nums[end2] =temp;
-            swap(nums,start2,end2);
+            swap(nums, start2, end2);
             start2++;
             end2--;
         }
@@ -238,42 +240,42 @@ public class Solution {
         return nums;
     }
 
-    public static void swap(int[] nums, int s , int e){
+    public static void swap(int[] nums, int s, int e) {
         int temp = nums[s];
         nums[s] = nums[e];
         nums[e] = temp;
     }
 
-    public static int secondSmallest(int[] nums){
+    public static int secondSmallest(int[] nums) {
         int small = nums[0];
         int ssmall = Integer.MAX_VALUE;
-        for(int i = 1 ; i<= nums.length-1; i++){
-            if (nums[i] < small){
+        for (int i = 1; i <= nums.length - 1; i++) {
+            if (nums[i] < small) {
                 ssmall = small;
                 small = nums[i];
             }
-            if (nums[i] < ssmall && nums[i] > small){
+            if (nums[i] < ssmall && nums[i] > small) {
                 ssmall = nums[i];
             }
         }
         return ssmall;
     }
 
-    public static int missingNumber(int[] nums){
+    public static int missingNumber(int[] nums) {
         int n = nums.length;
 
-        int sum = n * (n+1)/2;
-        int actualAns=0;
-        for (int x : nums){
+        int sum = n * (n + 1) / 2;
+        int actualAns = 0;
+        for (int x : nums) {
             actualAns += x;
         }
         return sum - actualAns;
     }
 
-    public static int firstRepeatingElement(int[] nums){
-        for (int i =0; i<=nums.length-1; i++){
-            for (int j = i-1; j >= 0 ; j--){
-                if (nums[i] == nums[j]){
+    public static int firstRepeatingElement(int[] nums) {
+        for (int i = 0; i <= nums.length - 1; i++) {
+            for (int j = i - 1; j >= 0; j--) {
+                if (nums[i] == nums[j]) {
                     return nums[j];
                 }
             }
@@ -281,10 +283,10 @@ public class Solution {
         return -1;
     }
 
-    public static boolean ifArrayContainsPairGivenSum(int[] nums, int target){
-        for (int i = 0; i <= nums.length-1; i++){
-            for (int j= i+1; j <= nums.length-1; j++){
-                if (nums[i] + nums[j] == target){
+    public static boolean ifArrayContainsPairGivenSum(int[] nums, int target) {
+        for (int i = 0; i <= nums.length - 1; i++) {
+            for (int j = i + 1; j <= nums.length - 1; j++) {
+                if (nums[i] + nums[j] == target) {
                     return true;
                 }
             }
@@ -292,27 +294,27 @@ public class Solution {
         return false;
     }
 
-    public static int majorityElement(int[] nums){
-        int size = nums.length/2;
+    public static int majorityElement(int[] nums) {
+        int size = nums.length / 2;
 
-        for (int i = 0; i<=nums.length-1; i++){
+        for (int i = 0; i <= nums.length - 1; i++) {
             int counter = 0;
             for (int num : nums) {
                 if (nums[i] == num) {
                     counter++;
                 }
             }
-            if (counter>size){
+            if (counter > size) {
                 return nums[i];
             }
         }
         return -1;
     }
 
-    public static boolean containsDuplicate(int[] nums){
-        for (int i =0 ; i<=nums.length-1; i++){
-            for (int j = i+1; j<=nums.length-1; j++){
-                if (nums[i] == nums[j]){
+    public static boolean containsDuplicate(int[] nums) {
+        for (int i = 0; i <= nums.length - 1; i++) {
+            for (int j = i + 1; j <= nums.length - 1; j++) {
+                if (nums[i] == nums[j]) {
                     return true;
                 }
             }
@@ -321,7 +323,7 @@ public class Solution {
     }
 
     //revise it
-    public static ArrayList<Integer> numbersDisappearedInArray(int[] nums ) {
+    public static ArrayList<Integer> numbersDisappearedInArray(int[] nums) {
         Arrays.sort(nums);
         int index = 1;
         ArrayList<Integer> arr = new ArrayList<>();
@@ -356,41 +358,41 @@ public class Solution {
     }
 
 
-    public static int removeDuplicateFromSortedArray(int[] nums){
+    public static int removeDuplicateFromSortedArray(int[] nums) {
         int first = 0;
-       // int count = 1;
-        for (int i = 1; i<=nums.length-1; i++){
-            if (nums[first] != nums[i]){
+        // int count = 1;
+        for (int i = 1; i <= nums.length - 1; i++) {
+            if (nums[first] != nums[i]) {
                 first++;
                 nums[first] = nums[i];
                 //count++;
             }
         }
-        return first +1;
+        return first + 1;
     }
 
     //******************-------String-------******************
 
-    public static void swapc(char[] nums, int s , int e){
+    public static void swapc(char[] nums, int s, int e) {
         char temp = nums[s];
         nums[s] = nums[e];
         nums[e] = temp;
     }
 
-    public static boolean validAnagram(String s, String t){
-        if (s.length() != t.length()){
+    public static boolean validAnagram(String s, String t) {
+        if (s.length() != t.length()) {
             return false;
         }
 
         int[] arr = new int[26];
-        int i=0;
-        while (i<=s.length()-1){
+        int i = 0;
+        while (i <= s.length() - 1) {
             arr[s.charAt(i) - 'a']++;
-            arr[t.charAt(i) -'a']--;
+            arr[t.charAt(i) - 'a']--;
             i++;
         }
-        for (int n : arr){
-            if (n != 0){
+        for (int n : arr) {
+            if (n != 0) {
                 return false;
             }
         }
@@ -398,28 +400,28 @@ public class Solution {
     }
 
     public static boolean isPalindrome(String s) {
-        int start = 0 ;
-        int end = s.length()-1;
+        int start = 0;
+        int end = s.length() - 1;
 
-        while (start<end){
+        while (start < end) {
             char f = s.charAt(start);
-            if (!Character.isLetterOrDigit(f)){
+            if (!Character.isLetterOrDigit(f)) {
                 start++;
                 continue;
             }
 
             char e = s.charAt(end);
-            if (!Character.isLetterOrDigit(e)){
+            if (!Character.isLetterOrDigit(e)) {
                 end--;
                 continue;
             }
 
-          if (Character.toLowerCase(s.charAt(start)) != Character.toLowerCase(s.charAt(end))){
-              return false;
-          }
+            if (Character.toLowerCase(s.charAt(start)) != Character.toLowerCase(s.charAt(end))) {
+                return false;
+            }
 
-          start++;
-          end--;
+            start++;
+            end--;
         }
 
         return true;
@@ -428,33 +430,33 @@ public class Solution {
     public static String longestCommonPrefix(String[] strs) {
         if (strs.length == 0) return "";
         String first = strs[0];
-        for (int i = 0 ; i<first.length();i++){
-            for (int j=1; j<strs.length;j++){
-                if (i>=strs[j].length()){
-                    return first.substring(0,i);
+        for (int i = 0; i < first.length(); i++) {
+            for (int j = 1; j < strs.length; j++) {
+                if (i >= strs[j].length()) {
+                    return first.substring(0, i);
                 }
-                if (first.charAt(i) != strs[j].charAt(i)){
-                    return first.substring(0,i);
+                if (first.charAt(i) != strs[j].charAt(i)) {
+                    return first.substring(0, i);
                 }
             }
         }
         return first;
     }
 
-    public static boolean valid(String s, String t){
-        if (s.length() != t.length()){
+    public static boolean valid(String s, String t) {
+        if (s.length() != t.length()) {
             return false;
         }
 
         char[] arr = new char[26];
         int i = 0;
-        while(i <= s.length()-1 ){
+        while (i <= s.length() - 1) {
             arr[s.charAt(i) - 'a']++;
-            arr[t.charAt(i)-'a']--;
+            arr[t.charAt(i) - 'a']--;
             i++;
         }
-        for (int n : arr){
-            if (n!=0){
+        for (int n : arr) {
+            if (n != 0) {
                 return false;
             }
         }
@@ -462,25 +464,25 @@ public class Solution {
     }
 
     public static String reverseVowels(String s) {
-    int first = 0;
-    int last = s.length()-1;
-    char[] arr = s.toCharArray();
-    while (first<last){
-        char chf = Character.toLowerCase(arr[first]);
-        char chl = Character.toLowerCase(arr[last]);
-        if (chf == 'a' || chf == 'e' || chf == 'i' ||  chf == 'o' || chf == 'u') {
-            if (chl == 'a' || chl == 'e' || chl == 'i' ||  chl == 'o' || chl == 'u') {
-                swapc(arr,first,last);
+        int first = 0;
+        int last = s.length() - 1;
+        char[] arr = s.toCharArray();
+        while (first < last) {
+            char chf = Character.toLowerCase(arr[first]);
+            char chl = Character.toLowerCase(arr[last]);
+            if (chf == 'a' || chf == 'e' || chf == 'i' || chf == 'o' || chf == 'u') {
+                if (chl == 'a' || chl == 'e' || chl == 'i' || chl == 'o' || chl == 'u') {
+                    swapc(arr, first, last);
+                    first++;
+                    last--;
+                } else {
+                    last--;
+                }
+            } else {
                 first++;
-                last--;
-            }else {
-                last--;
             }
-        }else {
-            first++;
         }
-    }
-    return new String(arr);
+        return new String(arr);
     }
 
     public String reverseWords(String s) {
@@ -489,9 +491,9 @@ public class Solution {
         String[] arr = s.trim().split("\\s+");
 
         int start = 0;
-        int end = arr.length-1;
+        int end = arr.length - 1;
 
-        while (start<end){
+        while (start < end) {
             String temp = arr[start];
             arr[start] = arr[end];
             arr[end] = temp;
@@ -501,5 +503,24 @@ public class Solution {
         }
 
         return String.join(" ", arr);
+    }
+
+    public static int firstUniqChar(String s) {
+        int[] arr = new int[26];
+
+        int i = 0;
+
+        while (i <= s.length() - 1) {
+            arr[s.charAt(i) - 'a']++;
+            i++;
+        }
+        for (int j = 0; j < s.length(); j++) {
+            int frequency = arr[s.charAt(j) - 'a'];
+
+            if (frequency == 1) {
+                return j;
+            }
+        }
+            return -1;
     }
 }
