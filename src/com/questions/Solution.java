@@ -2,6 +2,7 @@ package com.questions;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Locale;
 
 public class Solution {
@@ -522,5 +523,17 @@ public class Solution {
             }
         }
             return -1;
+    }
+
+    //hash
+    public boolean containsDuplicateWithHash(int[] nums) {
+        HashSet<Integer> set = new HashSet<>();
+        for(int i=0; i<=nums.length-1;i++){
+            if (set.contains(nums[i])){
+                return true;
+            }
+            set.add(nums[i]);
+        }
+        return false;
     }
 }
