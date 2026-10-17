@@ -546,4 +546,27 @@ public class Solution {
         }
         return new int[] {-1,-1};
     }
+
+    public int majorityElementUsingHashing(int[] nums) {
+        Map<Integer,Integer> map = new HashMap<>();
+
+        int n = nums.length /2;
+        for (int i =0; i<=nums.length-1; i++){
+            boolean ck = map.containsKey(nums[i]);
+            if (ck){
+                int fre = map.get(nums[i]);
+                int fre1 = fre +1;
+                map.put(nums[i],fre1);
+                if (fre1 > n){
+                    return nums[i];
+                }
+            } else {
+                map.put(nums[i],1);
+                if (1>n){
+                    return nums[i];
+                }
+            }
+        }
+        return -1;
+    }
 }
