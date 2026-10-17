@@ -1,9 +1,6 @@
 package com.questions;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Locale;
+import java.util.*;
 
 public class Solution {
     public static void main(String[] args) {
@@ -535,5 +532,18 @@ public class Solution {
             set.add(nums[i]);
         }
         return false;
+    }
+
+    public int[] twoSum(int[] nums, int target) {
+        HashMap<Integer,Integer> map = new HashMap<>();
+        for (int i = 0; i<= nums.length-1; i++){
+            int com = target - nums[i];
+
+            if (map.containsKey(com)){
+                return new int[] {map.get(com), i};
+            }
+            map.put(nums[i],i);
+        }
+        return new int[] {-1,-1};
     }
 }
