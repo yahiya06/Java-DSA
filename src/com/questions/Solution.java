@@ -7,7 +7,8 @@ public class Solution {
         String s = "listen";
         String t = "silent";
 
-        int[] nums = {0, 0, 1, 1, 2, 3, 3, 4};
+        int[] nums = {0, 1, 0, 1, 0, 0, 1, 1, 1, 0};
+        System.out.println(Arrays.toString(segregate0and1(nums)));
 //        System.out.println(validAnagram(s,t));
 //        String n= rev(s);
 //        System.out.println(n);
@@ -38,7 +39,9 @@ public class Solution {
         String s1 = "loveleetcode";
 
 //        System.out.println(longestCommonPrefix(strs));
-        System.out.println(firstUniqChar(s1));
+        //System.out.println(firstUniqChar(s1));
+
+
 
     }
 
@@ -623,5 +626,23 @@ public class Solution {
             map2.put(b,a);
         }
         return true;
+    }
+
+
+    public static int[] segregate0and1(int[] arr) {
+        int i =0;
+        int j= arr.length-1;
+
+        while(i<j){
+            if (arr[i] == 0) {
+                i++;
+            } else if (arr[i] == 1) {
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+                j--;
+            }
+        }
+        return arr;
     }
 }
