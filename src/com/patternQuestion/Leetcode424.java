@@ -2,7 +2,7 @@ package com.patternQuestion;
 
 //https://leetcode.com/problems/longest-repeating-character-replacement/
 
-public class Leetcode224 {
+public class Leetcode424 {
     public int characterReplacement(String s, int k) {
         int n = s.length();
         int low = 0, high = 0, res = Integer.MIN_VALUE;
