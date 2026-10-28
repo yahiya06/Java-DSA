@@ -1,4 +1,4 @@
-package com.patternQuestion;
+package com.patternQuestion.sw;
 
 import java.util.HashMap;
 

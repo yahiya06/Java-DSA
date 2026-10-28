@@ -1,4 +1,4 @@
-package com.patternQuestion;
+package com.patternQuestion.twoPointer;
 
 import java.util.ArrayList;
 import java.util.Arrays;

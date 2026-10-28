@@ -1,4 +1,4 @@
-package com.patternQuestion;
+package com.patternQuestion.sw;
 
 //https://www.geeksforgeeks.org/problems/max-sum-subarray-of-size-k5313/1
 public class MaxSumSubarrayOfSizeK {
@@ -10,7 +10,7 @@ public class MaxSumSubarrayOfSizeK {
         int low = 0;
         int high = k-1;
 
-        for (int i = low ; i<=high;i++){
+        for (int i = low ; i <= high ; i++){
             sum = sum + arr[i];
         }
 

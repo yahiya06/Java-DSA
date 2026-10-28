@@ -1,4 +1,4 @@
-package com.patternQuestion;
+package com.patternQuestion.twoPointer;
 
 //https://leetcode.com/problems/sort-colors/
 

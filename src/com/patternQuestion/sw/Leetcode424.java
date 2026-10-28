@@ -1,4 +1,4 @@
-package com.patternQuestion;
+package com.patternQuestion.sw;
 
 //https://leetcode.com/problems/longest-repeating-character-replacement/
 
