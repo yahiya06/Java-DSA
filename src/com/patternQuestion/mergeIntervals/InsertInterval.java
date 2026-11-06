@@ -1,35 +1,36 @@
 package com.patternQuestion.mergeIntervals;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class InsertInterval {
     public static void main(String[] args) {
         int[][] intervals = new int[][]{{1,2},{3,5},{6,7},{8,10},{12,16}};
-        int [] newIntervals = new int[];
+        int [] newIntervals = new int[]{4,8};
+        int[][] ans = insert(intervals, newIntervals);
+        System.out.println(Arrays.deepToString(ans));
     }
-
-    public int[][] insert(int[][] intervals, int[] newInterval) {
+    public static int[][] insert(int[][] intervals, int[] newInterval) {
         int n = intervals.length;
         List<int[]> arr = new ArrayList<>();
         boolean insert = false;
-        for (int i = 0; i < n; i++) {
-            int start = intervals[i][0];
-            if (insert == false && start >= newInterval[0]) {
+        for (int[] interval : intervals) {
+            int start = interval[0];
+            if (!insert && start >= newInterval[0]) {
                 arr.add(newInterval);
                 insert = true;
             }
-            arr.add(intervals[i]);
+            arr.add(interval);
         }
-        if (insert == false) {
+        if (!insert) {
             arr.add(newInterval);
         }
         int[][] nums = arr.toArray(new int[arr.size()][]);
-        int[][] ans = merge(nums);
-        return ans;
+        return merge(nums);
     }
 
-    private int[][] merge(int[][] nums) {
+    private static int[][] merge(int[][] nums) {
         List<int[]> ans = new ArrayList<>();
         int s1 = nums[0][0];
         int e1 = nums[0][1];
