@@ -1,0 +1,25 @@
+package com.patternQuestion.mergeIntervals;
+
+import java.util.Arrays;
+
+//https://www.geeksforgeeks.org/problems/overlapping-intervals--174556/1
+
+public class OverlappingIntervals {
+    static boolean isIntersect(int[][] intervals) {
+        // Code Here
+        int n = intervals.length;
+        Arrays.sort(intervals,(a, b)->a[0]-b[0]);
+        int s1= intervals[0][0];
+        int e1 = intervals[0][1];
+        for(int i =1; i<n;i++){
+            int s2 = intervals[i][0];
+            int e2 = intervals[i][1];
+            if(e1>=s2){
+                return true;
+            }
+            s1 = s2;
+            e1 = e2;
+        }
+        return false;
+    }
+}
