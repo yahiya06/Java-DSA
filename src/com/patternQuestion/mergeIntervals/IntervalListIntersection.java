@@ -3,6 +3,8 @@ package com.patternQuestion.mergeIntervals;
 import java.util.ArrayList;
 import java.util.List;
 
+//https://leetcode.com/problems/interval-list-intersections/description/
+
 public class IntervalListIntersection {
     public int[][] intervalIntersection(int[][] firstList, int[][] secondList) {
         int n = firstList.length;
