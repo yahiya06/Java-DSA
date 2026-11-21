@@ -6,7 +6,7 @@ I solve problems from platforms like **LeetCode** and **GeeksforGeeks** to impro
 
 I'm continuously learning, practicing, and improving my understanding of DSA.
 
-**Language:** Java
+**Language:** Java.
 yahiya khan 
 
 Happy Coding! 🚀
